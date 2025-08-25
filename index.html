@@ -8,7 +8,7 @@
     <meta name="robots" content="index, follow" />
 
     <!-- SEO Meta Tags -->
-    <meta 
+    <meta
       name="description"
       content="Full Stack Software Engineer building robust systems and solving complex problems. Currently working on FairMeld, a platform for client-freelancer collaboration."
     />
@@ -50,10 +50,19 @@
     <!-- Font Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload critical fonts -->
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap"
+    /></noscript>
 
     <!-- Favicon and App Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -66,62 +75,7 @@
     <meta name="msapplication-config" content="/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
 
-    <style>
-      body {
-        -webkit-font-smoothing: antialiased;
-        padding: 5vh 10vw;
-        background-color: rgb(244, 244, 243);
-        color: rgb(50, 50, 90);
-        font-family: "Instrument Sans", sans-serif;
-        font-weight: 400;
-      }
-      h1 {
-        font-size: 4.5em;
-        font-weight: 500;
-        font-style: italic;
-        margin-bottom: 1em;
-        font-family: "Instrument Serif", serif;
-      }
-      p {
-        font-size: 1.2em;
-        font-weight: 300;
-        line-height: 1.5;
-        max-width: 32em;
-        margin: 1.5em 0;
-      }
-      a {
-        text-decoration: none;
-        white-space: nowrap;
-        color: #121314;
-        position: relative;
-      }
-      a:after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 66%;
-        left: -0.1em;
-        right: -0.1em;
-        bottom: 0;
-        transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
-        background-color: rgba(79, 192, 141, 0.5);
-      }
-      a:hover:after {
-        top: 0%;
-      }
-      @media (max-width: 1280px) {
-        p {
-          font-size: 1.1em;
-        }
-        body {
-          padding: 3vh 5vw;
-        }
-        h1 {
-          font-size: 3.5em;
-          margin-bottom: 0.7em;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Destiny Saturday</h1>
@@ -143,17 +97,23 @@
     </p>
 
     <p>
-      My expertise spans <a href="https://github.com/qubzes" target="_blank">backend development</a>,
-      <a href="https://github.com/qubzes" target="_blank">cloud infrastructure</a>, and
-      <a href="https://github.com/qubzes" target="_blank">AI applications</a>. I've built everything
-      from e-commerce solutions, access control systems, computer vision, AI
-      agents always prioritizing simplicity and impact.
+      My expertise spans
+      <a href="https://github.com/qubzes" target="_blank">backend development</a
+      >,
+      <a href="https://github.com/qubzes" target="_blank"
+        >cloud infrastructure</a
+      >, and
+      <a href="https://github.com/qubzes" target="_blank">AI applications</a>.
+      I've built everything from e-commerce solutions, access control systems,
+      computer vision, AI agents always prioritizing simplicity and impact.
     </p>
 
     <p>
       Check out my projects on
       <a href="https://github.com/qubzes" target="_blank">GitHub</a>, connect
-      with me on <a href="https://www.linkedin.com/in/qubzes" target="_blank">LinkedIn</a>, or drop me a line at
+      with me on
+      <a href="https://www.linkedin.com/in/qubzes" target="_blank">LinkedIn</a>,
+      or drop me a line at
       <a href="mailto:hello@qubzes.com" target="_blank">hello@qubzes.com</a>. I
       occasionally share engineering insights on
       <a href="https://x.com/qubzes" target="_blank">X</a>.

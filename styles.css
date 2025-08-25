@@ -1,0 +1,152 @@
+/* Font Faces */
+@font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/instrumentsans/v1/bKfOKnbV5Ot_uDBptBZCn-wgkYKNZ_GE4vPl.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Instrument Serif';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/instrumentserif/v4/bKfNKnbC5Ot_uDBptTdgbcKJnYKKTdSYBQI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Base Styles */
+body {
+    -webkit-font-smoothing: antialiased;
+    padding: 5vh 10vw;
+    background-color: rgb(244, 244, 243);
+    color: rgb(50, 50, 90);
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 400;
+    font-display: swap;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4.5em;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 1em;
+    font-family: "Instrument Serif", serif;
+    font-display: swap;
+    line-height: 1.1;
+}
+
+p {
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 32em;
+    margin: 1.5em 0;
+}
+
+a {
+    text-decoration: none;
+    white-space: nowrap;
+    color: #121314;
+    position: relative;
+}
+
+a:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 66%;
+    left: -0.1em;
+    right: -0.1em;
+    bottom: 0;
+    transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+    background-color: rgba(79, 192, 141, 0.5);
+}
+
+a:hover:after {
+    top: 0%;
+}
+
+/* 404 Page Specific Styles */
+.error-page {
+    padding: 0vh 10vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.error-page h1 {
+    margin-bottom: 0.5em;
+}
+
+.error-page p {
+    margin: 1em 0;
+}
+
+.error-code {
+    font-size: 6em;
+    font-weight: 700;
+    color: rgb(79, 192, 141);
+    margin: 0.5em 0;
+    font-family: "Instrument Sans", sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+    p {
+        font-size: 1.1em;
+    }
+    body {
+        padding: 3vh 5vw;
+    }
+    h1 {
+        font-size: 3.5em;
+        margin-bottom: 0.7em;
+    }
+    .error-page {
+        padding: 0vh 5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 3vh 5vw;
+    }
+    .error-page {
+        padding: 0vh 5vw;
+    }
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 0.7em;
+    }
+    .error-code {
+        font-size: 4em;
+    }
+    p {
+        font-size: 1em;
+        max-width: 100%;
+        margin: 0.8em 0;
+    }
+    .error-page p {
+        margin: 0.8em 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+    .error-code {
+        font-size: 3em;
+    }
+    p {
+        font-size: 0.9em;
+        line-height: 1.6;
+    }
+}
